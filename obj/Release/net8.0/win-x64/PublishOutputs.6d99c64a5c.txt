@@ -1,0 +1,3 @@
+D:\CS_Physics\bin\Release\net8.0\win-x64\publish\CS_Physics.exe
+D:\CS_Physics\bin\Release\net8.0\win-x64\publish\CS_Physics.pdb
+D:\CS_Physics\bin\Release\net8.0\win-x64\publish\raylib.dll
