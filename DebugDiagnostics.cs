@@ -9,7 +9,7 @@ public static class DebugDiagnostics
     public static void drawMouse(Color color, float size = 3f)
     {
         Vector2 mouse = Raylib.GetMousePosition();
-        Raylib.DrawCircle((int)mouse.X, (int)mouse.Y, size, color);
+        Raylib.DrawCircleV(mouse, size, color);
     }
 
 }

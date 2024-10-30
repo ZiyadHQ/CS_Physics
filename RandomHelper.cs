@@ -18,11 +18,11 @@ public static class RandomHelper
     {
         float maxSide = MathF.Sqrt(FlatWorld.MaxBodySize);
         width = maxRadius * random.NextSingle();
-        // height = maxRadius * random.NextSingle();
+        height = maxRadius * random.NextSingle();
         
         width = Math.Clamp(width, 50f, 100f);
 
-        height = width;
+        // height = width;
     }
 
     public static void addRandomFlatBody(FlatWorld world, int count)
@@ -36,7 +36,7 @@ public static class RandomHelper
                 FlatBody.CreateCircleBody
                 (
                     Math.Clamp(random.NextSingle() * maxRadius, minRadius, maxRadius),
-                    randomVector2(500, 500),
+                    randomVector2(Raylib.GetScreenWidth(), Raylib.GetScreenHeight()),
                     Math.Clamp(random.NextSingle() * FlatWorld.MaxDensity, FlatWorld.MinDensity, FlatWorld.MaxDensity),
                     false,
                     random.NextSingle(),

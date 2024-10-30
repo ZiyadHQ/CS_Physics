@@ -25,6 +25,7 @@ public sealed class FlatBody
     public float radius;
     public float width;
     public float height;
+    public readonly float rectDiameter;
 
     public readonly Vector2[] vertices;
     public readonly int[] triangles;
@@ -58,6 +59,11 @@ public sealed class FlatBody
         this.height = height;
 
         this.shapeType = shapeType;
+
+        if(this.shapeType == ShapeType.Box)
+        {
+            this.rectDiameter = MathF.Sqrt(this.width*this.width + this.height*this.height) * 0.5f;
+        }
 
         if(shapeType is ShapeType.Box)
         {

@@ -4,7 +4,7 @@ using System.Numerics;
 using System.Text;
 using Raylib_cs;
 
-Raylib.InitWindow(600, 600, "physics engine");
+Raylib.InitWindow(1000, 1000, "physics engine");
 
 Raylib.SetTargetFPS(0);
 
@@ -17,6 +17,8 @@ float dy = 0f;
 float speed = 100f;
 
 Vector2 playerVelocity = Vector2.Zero;
+
+Vector2 cameraPosition = Vector2.Zero;
 
 Stopwatch timer = new();
 
@@ -52,7 +54,8 @@ while (!Raylib.WindowShouldClose())
 
     for(int i=0; i<world.bodyList.Count; i++)
     {
-        world.bodyList[i].Rotate(MathF.PI/2f * Raylib.GetFrameTime());
+        // world.bodyList[i].Rotate(MathF.PI/2f * Raylib.GetFrameTime());
+        world.bodyList[i].Move(new Vector2(1f, 0));
     }
 
     for (int i = 0; i < world.bodyList.Count - 1; i++)

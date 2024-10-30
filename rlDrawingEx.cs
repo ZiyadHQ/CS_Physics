@@ -45,7 +45,7 @@ public static class rlDrawingEx
             vb = correctVector(vb);
 
             Raylib.DrawLineEx(va, vb, width, color);
-            //Raylib.DrawCircleV(va, 2f, Color.Red);
+            Raylib.DrawCircleV(va, 2f, Color.Red);
         }
     }
 

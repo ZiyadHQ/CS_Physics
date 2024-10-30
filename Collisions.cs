@@ -6,13 +6,43 @@ using System.Runtime.CompilerServices;
 public static class Collisions
 {
 
-    [SkipLocalsInit]
+    public static bool IntersectPolygons(FlatBody bodyA, FlatBody bodyB,
+    out Vector2 normal, out float depth)
+    {
+        Vector2[] verticesA = bodyA.GetTransformedVertices();
+        Vector2[] verticesB = bodyB.GetTransformedVertices();
+
+        Vector2 centerA = FindArithmeticMean(verticesA);
+        Vector2 centerB = FindArithmeticMean(verticesB);
+
+        foreach(Vector2 v in verticesA){Raylib.DrawCircleV(v, 3, Color.Beige);}
+
+        // rlDrawingEx.DrawCircleVCorrected(centerA, 5, Color.DarkGreen);
+        // rlDrawingEx.DrawCircleVCorrected(centerB, 5, Color.DarkGreen);
+
+        normal = Vector2.Zero;
+        depth = 0;
+
+        if(Vector2.Distance(centerA, centerB) > bodyA.rectDiameter + bodyB.rectDiameter)
+        {
+            return false;
+        }
+
+        return IntersectPolygons(verticesA, verticesB, out normal, out depth);
+    }
+
     public static bool IntersectPolygons(Vector2[] verticesA, Vector2[] verticesB,
     out Vector2 normal, out float depth)
     {
 
         normal = Vector2.Zero;
         depth = float.MaxValue;
+
+        Vector2 centerA = FindArithmeticMean(verticesA);
+        Vector2 centerB = FindArithmeticMean(verticesB);
+
+        Raylib.DrawCircleV(centerA, 5, Color.DarkGreen);
+        rlDrawingEx.DrawCircleVCorrected(centerB, 5, Color.DarkGreen);
 
         for(int i=0; i< verticesA.Length; i++)
         {
@@ -67,9 +97,6 @@ public static class Collisions
 
         depth /= normal.Length();
         normal = Vector2.Normalize(normal);
-
-        Vector2 centerA = FindArithmeticMean(verticesA);
-        Vector2 centerB = FindArithmeticMean(verticesB);
 
         Vector2 direction = centerB - centerA;
 
