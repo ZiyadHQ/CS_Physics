@@ -11,7 +11,7 @@ Raylib.SetTargetFPS(0);
 
 FlatWorld world = new();
 
-RandomHelper.addRandomFlatBody(world, 1000);
+RandomHelper.addRandomFlatBody(world, 10000);
 
 float dx = 0f;
 float dy = 0f;

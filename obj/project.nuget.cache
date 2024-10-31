@@ -1,13 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "TS1HWlviaEo=",
+  "dgSpecHash": "UQePBBq0iPo=",
   "success": true,
   "projectFilePath": "D:\\CS_Physics\\CS_Physics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zxzx-\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.10\\microsoft.dotnet.ilcompiler.8.0.10.nupkg.sha512",
     "C:\\Users\\zxzx-\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.10\\microsoft.net.illink.tasks.8.0.10.nupkg.sha512",
     "C:\\Users\\zxzx-\\.nuget\\packages\\raylib-cs\\6.1.1\\raylib-cs.6.1.1.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.10\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.10.nupkg.sha512",
     "C:\\Users\\zxzx-\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.10\\microsoft.netcore.app.runtime.win-x64.8.0.10.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.10\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.10.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.10\\microsoft.aspnetcore.app.runtime.win-x64.8.0.10.nupkg.sha512",
     "C:\\Users\\zxzx-\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.10\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.10.nupkg.sha512"
   ],
   "logs": []
