@@ -198,3 +198,4 @@ D:\CS_Physics\obj\Release\net8.0\win-x64\refint\CS_Physics.dll
 D:\CS_Physics\obj\Release\net8.0\win-x64\CS_Physics.pdb
 D:\CS_Physics\obj\Release\net8.0\win-x64\CS_Physics.genruntimeconfig.cache
 D:\CS_Physics\obj\Release\net8.0\win-x64\ref\CS_Physics.dll
+D:\CS_Physics\obj\Release\net8.0\win-x64\CS_Physics.sourcelink.json

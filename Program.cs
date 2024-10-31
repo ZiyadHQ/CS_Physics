@@ -1,6 +1,7 @@
 ﻿
 using System.Diagnostics;
 using System.Numerics;
+using System.Reflection.Metadata;
 using System.Text;
 using Raylib_cs;
 
@@ -10,11 +11,11 @@ Raylib.SetTargetFPS(0);
 
 FlatWorld world = new();
 
-RandomHelper.addRandomFlatBody(world, 100);
+RandomHelper.addRandomFlatBody(world, 1000);
 
 float dx = 0f;
 float dy = 0f;
-float speed = 100f;
+float speed = 10f;
 
 Vector2 playerVelocity = Vector2.Zero;
 
@@ -29,14 +30,16 @@ while (!Raylib.WindowShouldClose())
     Raylib.BeginDrawing();
     DebugDiagnostics.drawMouse(color: Color.Red);
     world.Draw();
-    // world.tick();
+    world.step(Raylib.GetFrameTime());
 
-    if (Raylib.IsKeyDown(KeyboardKey.Up)) { dy += 1f; Math.Clamp(dy, -20f, 10f); }
-    if (Raylib.IsKeyDown(KeyboardKey.Down)) { dy -= 1f; Math.Clamp(dy, -20f, 10f); }
-    if (Raylib.IsKeyDown(KeyboardKey.Right)) { dx += 1f; Math.Clamp(dx, -20f, 10f); }
-    if (Raylib.IsKeyDown(KeyboardKey.Left)) { dx -= 1f; Math.Clamp(dx, -20f, 10f); }
+    if (Raylib.IsKeyDown(KeyboardKey.Up)) { dy += 1f; Math.Clamp(dy, -1f, 1f); }
+    if (Raylib.IsKeyDown(KeyboardKey.Down)) { dy -= 1f; Math.Clamp(dy, -1f, 1f); }
+    if (Raylib.IsKeyDown(KeyboardKey.Right)) { dx += 1f; Math.Clamp(dx, -1f, 1f); }
+    if (Raylib.IsKeyDown(KeyboardKey.Left)) { dx -= 1f; Math.Clamp(dx, -1f, 1f); }
+    if(Raylib.IsKeyDown(KeyboardKey.E)){world.bodyList[0].Rotate(-MathF.PI * 0.5f * Raylib.GetFrameTime());}
+    if(Raylib.IsKeyDown(KeyboardKey.Q)){world.bodyList[0].Rotate(MathF.PI * 0.5f * Raylib.GetFrameTime());}
 
-    if(Raylib.IsMouseButtonDown(MouseButton.Left))
+    if (Raylib.IsMouseButtonDown(MouseButton.Left))
     {
         Vector2 position = Raylib.GetMousePosition();
         Vector2 correctedPosition = new(position.X, Raylib.GetScreenHeight() - position.Y);
@@ -47,45 +50,8 @@ while (!Raylib.WindowShouldClose())
     {
         Vector2 displacement = Vector2.Normalize(new(dx, dy)) * speed * Raylib.GetFrameTime();
         displacement = new(dx, dy);
-        world.bodyList[0].MoveTo(displacement);
-        float vecToAngle = MathF.Atan2(dy, dx);
-        world.bodyList[0].RotateTo(vecToAngle);
-    }
-
-    for(int i=0; i<world.bodyList.Count; i++)
-    {
-        // world.bodyList[i].Rotate(MathF.PI/2f * Raylib.GetFrameTime());
-        world.bodyList[i].Move(new Vector2(1f, 0));
-    }
-
-    for (int i = 0; i < world.bodyList.Count - 1; i++)
-    {
-        FlatBody bodyA = world.bodyList[i];
-        for (int j = i + 1; j < world.bodyList.Count; j++)
-        {
-            FlatBody bodyB = world.bodyList[j];
-
-            // if(collisions.IntersectCircles(bodyA.position, bodyA.radius, bodyB.position, bodyB.radius,
-            //  out Vector2 normal, out float depth))
-            // {
-            //     bodyA.Move(-normal * depth/2);
-            //     bodyB.Move(normal * depth/2);
-            // }
-            if(Collisions.IntersectPolygons(bodyA.GetTransformedVertices(), bodyB.GetTransformedVertices(), out Vector2 normal, out float depth))
-            {
-
-                bodyA.Move(-normal * depth/2f);
-                bodyB.Move(normal * depth/2f);
-
-                // Vector2 position = bodyA.position;
-                // Vector2 correctedPosition = new(position.X, Raylib.GetScreenHeight() - position.Y);
-                // Raylib.DrawCircleV(correctedPosition, 5f, Color.DarkGreen);
-
-                // position = bodyB.position;
-                // correctedPosition = new(position.X, Raylib.GetScreenHeight() - position.Y);
-                // Raylib.DrawCircleV(correctedPosition, 5f, Color.DarkGreen);
-            }
-        }
+        
+        world.bodyList[0].linearVelocity = displacement;
     }
 
     Raylib.EndDrawing();

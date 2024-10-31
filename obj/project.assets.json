@@ -2,13 +2,13 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Microsoft.DotNet.ILCompiler/8.0.8": {
+      "Microsoft.DotNet.ILCompiler/8.0.10": {
         "type": "package",
         "build": {
           "build/Microsoft.DotNet.ILCompiler.props": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.8": {
+      "Microsoft.NET.ILLink.Tasks/8.0.10": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -64,10 +64,10 @@
     }
   },
   "libraries": {
-    "Microsoft.DotNet.ILCompiler/8.0.8": {
-      "sha512": "OWFDT/S4Zl5QVakCjVfRaZTLrmWDhA20ud/BKkru7vWnIrejMcUk4Xz2MwavgyzBypryoHYta787k4avhxsU9A==",
+    "Microsoft.DotNet.ILCompiler/8.0.10": {
+      "sha512": "iThS5LNCcLlFkUlnxCJMgMSQ6s1BgbZo9ri11DDgNxDn8StwgFVUQJ8O5N/7S037jcS1md8tWp7Zu2YconIlag==",
       "type": "package",
-      "path": "microsoft.dotnet.ilcompiler/8.0.8",
+      "path": "microsoft.dotnet.ilcompiler/8.0.10",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -86,7 +86,7 @@
         "build/NativeAOT.natvis",
         "build/WindowsAPIs.txt",
         "build/findvcvarsall.bat",
-        "microsoft.dotnet.ilcompiler.8.0.8.nupkg.sha512",
+        "microsoft.dotnet.ilcompiler.8.0.10.nupkg.sha512",
         "microsoft.dotnet.ilcompiler.nuspec",
         "runtime.json",
         "tools/netstandard/ILCompiler.Build.Tasks.deps.json",
@@ -94,10 +94,10 @@
         "tools/netstandard/ILCompiler.Build.Tasks.pdb"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/8.0.8": {
-      "sha512": "P8wR6MUWwYXIjPJuBaZgo5zlI/GWI6QEAo6NyVIbPefa9CCkohYu7dP2rD/mrqnjEqfRHyl+h9VZrDoGpELqYg==",
+    "Microsoft.NET.ILLink.Tasks/8.0.10": {
+      "sha512": "xT8jYjlroY7SLbGtoV9vUTVW/TPgodL4Egc31a444Xe0TMytLZ3UlKQ0kxMZsy/CrWsFB6wtKnSG1SsXcWreew==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.8",
+      "path": "microsoft.net.illink.tasks/8.0.10",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -111,7 +111,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.10.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -215,30 +215,32 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Microsoft.DotNet.ILCompiler >= 8.0.8",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.8",
+      "Microsoft.DotNet.ILCompiler >= 8.0.10",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.10",
       "raylib-cs >= 6.1.1"
     ]
   },
   "packageFolders": {
-    "/home/ziyadhq/.nuget/packages/": {}
+    "C:\\Users\\zxzx-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ziyadhq/Desktop/cs_physics/CS_Physics/CS_Physics.csproj",
+      "projectUniqueName": "D:\\CS_Physics\\CS_Physics.csproj",
       "projectName": "CS_Physics",
-      "projectPath": "/home/ziyadhq/Desktop/cs_physics/CS_Physics/CS_Physics.csproj",
-      "packagesPath": "/home/ziyadhq/.nuget/packages/",
-      "outputPath": "/home/ziyadhq/Desktop/cs_physics/CS_Physics/obj/",
+      "projectPath": "D:\\CS_Physics\\CS_Physics.csproj",
+      "packagesPath": "C:\\Users\\zxzx-\\.nuget\\packages\\",
+      "outputPath": "D:\\CS_Physics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ziyadhq/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\zxzx-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -251,6 +253,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -260,13 +267,13 @@
           "Microsoft.DotNet.ILCompiler": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.8, )",
+            "version": "[8.0.10, )",
             "autoReferenced": true
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.8, )",
+            "version": "[8.0.10, )",
             "autoReferenced": true
           },
           "raylib-cs": {
@@ -287,8 +294,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "runtime.linux-x64.Microsoft.DotNet.ILCompiler",
-            "version": "[8.0.8, 8.0.8]"
+            "name": "runtime.win-x64.Microsoft.DotNet.ILCompiler",
+            "version": "[8.0.10, 8.0.10]"
           }
         ],
         "frameworkReferences": {
@@ -296,7 +303,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

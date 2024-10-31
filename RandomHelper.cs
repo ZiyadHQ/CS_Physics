@@ -18,11 +18,11 @@ public static class RandomHelper
     {
         float maxSide = MathF.Sqrt(FlatWorld.MaxBodySize);
         width = maxRadius * random.NextSingle();
-        height = maxRadius * random.NextSingle();
+        // height = maxRadius * random.NextSingle();
         
         width = Math.Clamp(width, 50f, 100f);
 
-        // height = width;
+        height = width;
     }
 
     public static void addRandomFlatBody(FlatWorld world, int count)
@@ -30,16 +30,18 @@ public static class RandomHelper
         for (int i = 0; i < count; i++)
         {
             FlatBody body;
-            if (random.Next(1) + 1 == 0)
+            if (random.Next(2) == 0)
             {
                 String message = String.Empty;
                 FlatBody.CreateCircleBody
                 (
                     Math.Clamp(random.NextSingle() * maxRadius, minRadius, maxRadius),
                     randomVector2(Raylib.GetScreenWidth(), Raylib.GetScreenHeight()),
-                    Math.Clamp(random.NextSingle() * FlatWorld.MaxDensity, FlatWorld.MinDensity, FlatWorld.MaxDensity),
+                    // Math.Clamp(random.NextSingle() * FlatWorld.MaxDensity, FlatWorld.MinDensity, FlatWorld.MaxDensity),
+                    FlatWorld.MaxDensity,
                     false,
-                    random.NextSingle(),
+                    // random.NextSingle(),
+                    1f,
                     out body,
                     out message
                 );
@@ -62,7 +64,8 @@ public static class RandomHelper
                     random.NextSingle(),
                     out body,
                     out message,
-                    random.NextSingle() * 2 * MathF.PI
+                    // random.NextSingle() * 2 * MathF.PI
+                    0
                 );
             }
             Color randomColor = getRandomColor();

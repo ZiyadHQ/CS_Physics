@@ -19,6 +19,11 @@ public static class rlDrawingEx
         DrawRectangleAngular(posX, posY, width, height, angle, color);
     }
 
+    public static void drawLineCorrectedV(Vector2 startPos, Vector2 endPos, float thickness, Color color)
+    {
+        Raylib.DrawLineEx(correctVector(startPos), correctVector(endPos), thickness, color);
+    }
+
     public static void DrawRectangleAngular(int posX, int posY, float width, float height, float angle, Color color)
     {
         Vector2 normalDirection = new(MathF.Cos(angle), MathF.Sin(angle));
@@ -49,6 +54,7 @@ public static class rlDrawingEx
         }
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Vector2 correctVector(Vector2 position)
     {
         return new(position.X, Raylib.GetScreenHeight() - position.Y);

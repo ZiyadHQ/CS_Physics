@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/ziyadhq/Desktop/cs_physics/CS_Physics/CS_Physics.csproj": {}
+    "D:\\CS_Physics\\CS_Physics.csproj": {}
   },
   "projects": {
-    "/home/ziyadhq/Desktop/cs_physics/CS_Physics/CS_Physics.csproj": {
+    "D:\\CS_Physics\\CS_Physics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ziyadhq/Desktop/cs_physics/CS_Physics/CS_Physics.csproj",
+        "projectUniqueName": "D:\\CS_Physics\\CS_Physics.csproj",
         "projectName": "CS_Physics",
-        "projectPath": "/home/ziyadhq/Desktop/cs_physics/CS_Physics/CS_Physics.csproj",
-        "packagesPath": "/home/ziyadhq/.nuget/packages/",
-        "outputPath": "/home/ziyadhq/Desktop/cs_physics/CS_Physics/obj/",
+        "projectPath": "D:\\CS_Physics\\CS_Physics.csproj",
+        "packagesPath": "C:\\Users\\zxzx-\\.nuget\\packages\\",
+        "outputPath": "D:\\CS_Physics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ziyadhq/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\zxzx-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -41,13 +48,13 @@
             "Microsoft.DotNet.ILCompiler": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )",
+              "version": "[8.0.10, )",
               "autoReferenced": true
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )",
+              "version": "[8.0.10, )",
               "autoReferenced": true
             },
             "raylib-cs": {
@@ -68,8 +75,8 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "runtime.linux-x64.Microsoft.DotNet.ILCompiler",
-              "version": "[8.0.8, 8.0.8]"
+              "name": "runtime.win-x64.Microsoft.DotNet.ILCompiler",
+              "version": "[8.0.10, 8.0.10]"
             }
           ],
           "frameworkReferences": {
@@ -77,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

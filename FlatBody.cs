@@ -11,9 +11,11 @@ public enum ShapeType
 public sealed class FlatBody
 {
     public Vector2 position;
-    private Vector2 linearVelocity;
+    public Vector2 linearVelocity;
     private float angle;
     private float angularVelocity;
+
+    private Vector2 force;
 
     public float mass;
     public float density;
@@ -46,6 +48,8 @@ public sealed class FlatBody
         this.linearVelocity = Vector2.Zero;
         this.angle = 0;
         this.angularVelocity = 0;
+
+        this.force = Vector2.Zero;
 
         this.mass = mass;
         this.density = density;
@@ -247,6 +251,22 @@ public sealed class FlatBody
         transformUpdateRequired = true;
     }
 
+    public void AddForce(Vector2 force)
+    {
+        this.force = force;
+    }
+
+    public void Step(float dt)
+    {
+        linearVelocity += force/mass * dt;
+
+        position += linearVelocity * dt;
+        angle += angularVelocity * dt;
+
+        force = Vector2.Zero;
+        transformUpdateRequired = true;
+    }
+
     public void Draw(Color color)
     {
         Vector2 correctedPosition = new(position.X, Raylib.GetScreenHeight() - position.Y);
@@ -256,7 +276,7 @@ public sealed class FlatBody
             Raylib.DrawCircleLinesV(correctedPosition, radius, color);
 
             //draw the angle line
-            Vector2 normalVec = new(MathF.Cos(angle), MathF.Sin(angle));
+            Vector2 normalVec = new(MathF.Cos(angle), -MathF.Sin(angle));
             Raylib.DrawLineEx(correctedPosition, correctedPosition + normalVec * radius, 1, Color.DarkGreen);
         }
         else
@@ -266,8 +286,8 @@ public sealed class FlatBody
             rlDrawingEx.DrawVertices(GetTransformedVertices(), 1, color);
 
             //draw the angle line
-            Vector2 normalVec = new(MathF.Cos(angle), MathF.Sin(angle));
-            Raylib.DrawLineEx(correctedPosition, correctedPosition + normalVec * height * 0.5f, 1, Color.DarkGreen);
+            Vector2 normalVec = new(MathF.Cos(angle), -MathF.Sin(angle));
+            Raylib.DrawLineEx(correctedPosition, correctedPosition + normalVec * width * 0.5f, 1, Color.DarkGreen);
         }
     }
 

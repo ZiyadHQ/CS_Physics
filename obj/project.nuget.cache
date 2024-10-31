@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "SddouAfKbau2qToHqzhwNil0QaPHy3dyX+I3GIpkbUHuNlhd3YiTX6NAnSUEXlr+FHJmfkYTrHtaXMyGkqhFiA==",
+  "dgSpecHash": "TS1HWlviaEo=",
   "success": true,
-  "projectFilePath": "/home/ziyadhq/Desktop/cs_physics/CS_Physics/CS_Physics.csproj",
+  "projectFilePath": "D:\\CS_Physics\\CS_Physics.csproj",
   "expectedPackageFiles": [
-    "/home/ziyadhq/.nuget/packages/microsoft.dotnet.ilcompiler/8.0.8/microsoft.dotnet.ilcompiler.8.0.8.nupkg.sha512",
-    "/home/ziyadhq/.nuget/packages/microsoft.net.illink.tasks/8.0.8/microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
-    "/home/ziyadhq/.nuget/packages/raylib-cs/6.1.1/raylib-cs.6.1.1.nupkg.sha512",
-    "/home/ziyadhq/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
-    "/home/ziyadhq/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/8.0.8/runtime.linux-x64.microsoft.dotnet.ilcompiler.8.0.8.nupkg.sha512"
+    "C:\\Users\\zxzx-\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.10\\microsoft.dotnet.ilcompiler.8.0.10.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.10\\microsoft.net.illink.tasks.8.0.10.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\raylib-cs\\6.1.1\\raylib-cs.6.1.1.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\zxzx-\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.10\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.10.nupkg.sha512"
   ],
   "logs": []
 }
