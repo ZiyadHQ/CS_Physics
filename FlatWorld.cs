@@ -59,27 +59,27 @@ public class FlatWorld
             bodyList[i].Step(dt);
         }
 
-        //gravity step
-        // float gravity_sum = 0f;
-        // for(int i=0; i<bodyList.Count - 1; i++)
-        // {
-        //     FlatBody bodyA = bodyList[i];
-        //     for(int j=i+1; j<bodyList.Count; j++)
-        //     {
-        //         FlatBody bodyB = bodyList[j];
-        //         float magnitude;
-        //         Vector2 normal;
+        // gravity step
+        float gravity_sum = 0f;
+        for(int i=0; i<bodyList.Count - 1; i++)
+        {
+            FlatBody bodyA = bodyList[i];
+            for(int j=i+1; j<bodyList.Count; j++)
+            {
+                FlatBody bodyB = bodyList[j];
+                float magnitude;
+                Vector2 normal;
 
-        //         CosmicForces.FindGravitationalForce(bodyA, bodyB, out normal, out magnitude);
+                CosmicForces.FindGravitationalForce(bodyA, bodyB, out normal, out magnitude);
 
-        //         gravity_sum += magnitude * 2;
+                gravity_sum += magnitude * 2;
 
-        //         bodyA.AddForce(normal * magnitude);
-        //         bodyB.AddForce(-normal * magnitude);
-        //     }
-        // }
+                bodyA.AddForce(normal * magnitude);
+                bodyB.AddForce(-normal * magnitude);
+            }
+        }
 
-        // Raylib.DrawText($"total force of gravity: {gravity_sum}", 50, 50, 12, Color.DarkGreen);
+        Raylib.DrawText($"total force of gravity: {gravity_sum}", 50, 50, 12, Color.DarkGreen);
 
         for (int i = 0; i < bodyList.Count - 1; i++)
         {

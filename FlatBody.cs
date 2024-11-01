@@ -282,8 +282,8 @@ public sealed class FlatBody
         else
         {
             //rlDrawingEx.DrawRectangleAngularV(correctedPosition, width, height, angle, color);
-
-            rlDrawingEx.DrawVertices(GetTransformedVertices(), 1, color);
+            Vector2[] vertices = GetTransformedVertices();
+            rlDrawingEx.DrawVertices(vertices, 1, color);
 
             //draw the angle line
             Vector2 normalVec = new(MathF.Cos(angle), -MathF.Sin(angle));

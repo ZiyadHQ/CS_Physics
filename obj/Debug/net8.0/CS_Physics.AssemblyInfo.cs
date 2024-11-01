@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CS_Physics")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4e45353a4c4dd6298ec6f474875c8525d86868d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6745a6715538277a53474ebeb0c641f3f634bf1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CS_Physics")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CS_Physics")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

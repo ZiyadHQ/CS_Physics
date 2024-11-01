@@ -6,7 +6,7 @@ public static class CosmicForces
 {
 
     //gravitational constant
-    public static readonly float G = 6.6743e-11f;
+    public static readonly float G = 6.6743e5f;
 
     public static void FindGravitationalForce(FlatBody bodyA, FlatBody bodyB, out Vector2 normal, out float magnitude)
     {

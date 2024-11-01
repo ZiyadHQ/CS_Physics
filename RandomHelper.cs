@@ -30,18 +30,18 @@ public static class RandomHelper
         for (int i = 0; i < count; i++)
         {
             FlatBody body;
-            if (random.Next(2) == 0)
+            if (random.Next(1) == 0)
             {
                 String message = String.Empty;
                 FlatBody.CreateCircleBody
                 (
                     Math.Clamp(random.NextSingle() * maxRadius, minRadius, maxRadius),
-                    randomVector2(Raylib.GetScreenWidth(), Raylib.GetScreenHeight()),
+                    randomVector2(count * 10, count * 10),
                     // Math.Clamp(random.NextSingle() * FlatWorld.MaxDensity, FlatWorld.MinDensity, FlatWorld.MaxDensity),
                     FlatWorld.MaxDensity,
                     false,
                     // random.NextSingle(),
-                    1f,
+                    0.01f,
                     out body,
                     out message
                 );
